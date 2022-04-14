@@ -41,7 +41,7 @@
 
 const seatsInCar = 5;
 let passengers = [];
-let tankFull = false;
+let tankFull = true;
 
 function enoughSeats() {
   console.log('in enoughSeats');
@@ -52,19 +52,31 @@ function enoughSeats() {
   }
 }
 
-function getInCar(newPassenger) {
+function getInCar(nameOfPassenger) {
   console.log('in getInCar', nameOfPassenger);
   passengers.push(nameOfPassenger);
   return passengers;
+}
+
+function readyForTrip(){
+  console.log('in readyForTrip')
+  if(enoughSeats() && tankFull){
+    return true;
+  } else {
+    return false;
+  }
 }
 getInCar('you');
 getInCar('Cats');
 getInCar('Sister');
 getInCar('Jacques');
-getInCar('mike');
-getInCar('james');
 
-enoughSeats();
+console.log('Enough seats?', enoughSeats());
+
+console.log('Are we ready for trip?', readyForTrip());
+// using console.log on the function will show what is returned ie: true or false. It will not show this is I only call the function w/o using console.log
+
+
 
 
 
