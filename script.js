@@ -77,6 +77,24 @@ console.log('Are we ready for trip?', readyForTrip());
 // using console.log on the function will show what is returned ie: true or false. It will not show this is I only call the function w/o using console.log
 
 
+let fern = false;
+let monstera = true;
+let norfolkPine = true;
+let begonia = false;
+
+function waterPlant(plantName){
+  if (plantName === true){
+    console.log('No need to water');
+  } else {
+    console.log('Time to water')
+  }
+}
+
+waterPlant(fern);
+
+// above is slack question week 4
+
+
 
 
 
